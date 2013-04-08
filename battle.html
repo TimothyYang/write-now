@@ -7,27 +7,29 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Scripts -->
+    <script src="resources/jquery/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="battle.js" type="text/javascript" charset="utf-8"></script>
+
     <!-- Le styles -->
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/bootstrap-select/bootstrap-select.css" rel="stylesheet">
+
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
-  <style type="text/css"></style><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+    <link href="battle.css" rel="stylesheet">
+
+  </head>
 
   <body screen_capture_injected="true">
 
@@ -39,11 +41,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="indexx.html">write('now')</a>
+          <a class="brand" href="index.html">write('now')</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="battle.html">Home</a></li>
-              <li><a href="battle.html">Battle</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="battle.html">Battle</a></li>
               <li><a href="freestyle.html">Freestyle</a></li>
               <li><a href="vote.html">Vote</a></li>
               <li><a href="about.html">About</a></li>
@@ -57,20 +59,31 @@
 
       <h1>Writing Battle</h1>
       <hr>
-      <div class="well alert-success">
-        Some settings here! :D
+      <div class="well alert-info">
+        Topic Category: 
+        <select class="selectpicker" data-style="btn-info">
+          <option>All</option>
+          <option>Nature</option>
+          <option>Technology</option>
+          <option>History</option>
+        </select>
+        <span id="time-limit">Time Limit:</span>
+        <select class="selectpicker" data-style="btn-info">
+          <option>1 min</option>
+          <option>5 min</option>
+          <option>10 min</option>
+        </select>
+        <button class="btn btn-primary" id="start">START!</button>
+
       </div>
       <div class="row">
         <div class="span6">
           <h3>You</h3>
-          <textarea  id="you-box">
-            Write here :D
-          </textarea>
+          <textarea id="you-box" placeholder="Start writing here...";></textarea>
         </div>
         <div class="span6">
           <h3>Opponent</h3>
-          <div class="well" style="height:300px">
-            Opponent writing here >:D
+          <div class="well" id="opp-box">
           </div>
         </div>
       </div>
@@ -94,6 +107,7 @@
     <script src="./battle_files/bootstrap-carousel.js"></script>
     <script src="./battle_files/bootstrap-typeahead.js"></script>
 
-  
+    <script src="resources/bootstrap-select/bootstrap-select.js" type="text/javascript" charset="utf-8"></script>
+
 
 </body></html>

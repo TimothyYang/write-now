@@ -1,7 +1,26 @@
 #you-box {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
+	height: 500px;
+	resize: none;
 	width: 100%;
+}
+
+#opp-box {
+	height: 500px;
+	padding: 4px 6px 4px 6px;
+}
+
+#category {
+	margin: 0px;
+}
+
+
+#start {
+	float: right;
+	position: relative;
+	width: 150px;
+	font-weight: bold;
+}
+
+#time-limit {
+	margin-left: 20px;
 }
