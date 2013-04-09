@@ -9,13 +9,13 @@
 
     <!-- Scripts -->
     <script src="resources/jquery/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/battle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/freestyle.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Le styles -->
     <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="resources/bootstrap-select/bootstrap-select.css" rel="stylesheet">
-    <link href="css/battle.css" rel="stylesheet">
+    <link href="css/freestyle.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -42,8 +42,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="battle.html">Battle</a></li>
-              <li><a href="freestyle.html">Freestyle</a></li>
+              <li><a href="battle.html">Battle</a></li>
+              <li class="active"><a href="freestyle.html">Freestyle</a></li>
               <li><a href="vote.html">Vote</a></li>
               <li><a href="profile.html">Profile</a></li>
               <li><a href="about.html">About</a></li>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="container">
-      <h1>Writing Battle</h1>
+      <h1>Writing Freestyle</h1>
       <hr>
       <div class="well alert-info" id="info">
         <a href="#" rel="tooltip" data-toggle="tooltip" data-placement="top" title data-original-title="Choose a category that you want to write about. You will get a random topic from that category.">Topic Category</a>:
@@ -72,14 +72,9 @@
         <button class="btn btn-primary" id="start">START!</button>
       </div>
       <div class="row">
-        <div class="span6">
+        <div class="span12">
           <h3>You</h3>
           <textarea disabled id="you-box" placeholder="Start writing here..."></textarea>
-        </div>
-        <div class="span6">
-          <h3>Opponent</h3>
-          <div class="well" id="opp-box">
-          </div>
         </div>
       </div>
 
