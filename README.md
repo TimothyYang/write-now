@@ -35,6 +35,10 @@ Dejected and out of ideas, Mob Riller is looking for a place to do some speed wr
 
 ---
 
-write('now') is a product of a course at MIT, [6.813 (UI Design)](http://stellar.mit.edu/S/course/6/sp13/6.813/index.html) taught by [Rob Miller](http://people.csail.mit.edu/rcm/) and [Haoqi Zhang](http://people.csail.mit.edu/hqz/).
+### About
 
-We can be contacted at mob-riller@mit.edu.
+write('now') is developed by [Clara Liu](https://github.com/lsyang), [Kimberly Toy](https://github.com/tokutei12), [Timothy Yang](https://github.com/TimothyYang).
+
+write('now') is the product of [6.813 (UI Design)](http://stellar.mit.edu/S/course/6/sp13/6.813/index.html) a course at MIT taught by [Rob Miller](http://people.csail.mit.edu/rcm/) and [Haoqi Zhang](http://people.csail.mit.edu/hqz/).
+
+Contact us at mob-riller@mit.edu.
