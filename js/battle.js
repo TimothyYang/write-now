@@ -22,6 +22,9 @@ $(document).ready(function() {
 		countdown(); // Start the 3 second countdown.
 
 		setTimeout(function(){
+			$("#submit").removeAttr("disabled");
+			$("#submit").html("<h4>Submit</h4>(automatically submits when time's up)");
+
 			$("#you-box").attr("disabled", false);
 			$("#you-box").focus();
 
@@ -43,6 +46,18 @@ $(document).ready(function() {
 
 		},4000); // 4 second wait to accomodate the countdown.
 
+	});
+
+	$("#submit").click(function() {
+		if ($("#submit").attr("submit") == "false"){
+			$("#you-box").attr("disabled", true);
+			$("#submit").html("<h4>Thanks for your submission!</h4>(click to continue writing)");
+			$("#submit").attr("submit", "true");
+		} else {
+			$("#you-box").attr("disabled", false);
+			$("#submit").html("<h4>Submit</h4>(automatically submits when time's up)");
+			$("#submit").attr("submit", "false");
+		}
 	});
 
 	// Runs and displays the 3 second countdown in the info bar.
@@ -73,6 +88,10 @@ $(document).ready(function() {
 	    		clearInterval(counter);
 	            $("#info").html("<div width='100%' style='font-size:2em;text-align:center;font-weight:bold' >Time's up! Waiting for results...</div>");
 	            $("#you-box").attr("disabled", true);
+	            $("#submit").html("<h4>Thanks for your submission!</h4>");
+	            $("#submit").attr("submit", "true");
+	            $("#submit").attr("disabled", true);
+
 
 	            return;
 	        }

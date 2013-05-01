@@ -7,28 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Scripts -->
+    <script src="resources/jquery/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+    
+
     <!-- Le styles -->
+    <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="resources/bootstrap-select/bootstrap-select.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
-
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
-  <style type="text/css"></style><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+      <![endif]-->
+    
+  </head>
 
   <body screen_capture_injected="true">
 
@@ -43,7 +41,7 @@
           <a class="brand" href="index.html" id="logo"><img src="img/logo-small-white.png" alt="write('now') logo"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="battle.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="battle.html">Battle</a></li>
               <li><a href="freestyle.html">Freestyle</a></li>
               <li><a href="vote.html">Vote</a></li>
@@ -57,8 +55,21 @@
 
     <div class="container">
 
+<div class="row">
+  <div class="span8">
       <h1>Profile</h1>
-      <hr>
+    </div>
+    <div class="span4">
+      <a href="#" rel="tooltip" id="time-limit" data-toggle="tooltip" data-placement="top">Sort by </a>:
+      <select class="selectpicker" data-style="btn-info" id="select-filter">
+          <option>vote</option>
+          <option>subject</option>
+          <option>date</option>
+        </select>
+        <br>
+      </div>
+    </div>
+
       <div class="row">
   <div class="span2">
     <img border="0" src="img/pika.png" alt="Pulpit rock" width="304" height="228">
@@ -77,109 +88,186 @@
           <br><br>
         </div>
       </div>
-<div class="row">
-        <div class="span3">
-          <div class="well alert-success" style="height:300px">
-            <h3>My life</h3>
-            Good writing here.
-          </div>
-        </div>
-        <div class="span3">
-          
-          <!-- <div class="well" style="height:300px; border-top:1px solid blue;"> -->
-          <div class="well alert-error" style="height:300px">
-            <h3>My dreams</h3>
-            Bad writing here.
-          </div>
-        </div>
-        <div class="span3">
-          <div class="well alert-info" style="height:300px">
-            <h3>The flying mantis bear</h3>
-            Freestyle writing here.
-          </div>
-        </div>
-        <div class="span3">
-          <div class="well alert-info" style="height:300px">
-            <h3>The truth of life</h3>
-            Freestyle writing here.
-          </div>
-        </div>
-      </div>
 
 
 <div class="row">
         <div class="span3">
-          <div class="well" style="height:300px; border-top:1px solid green;">
-            <h3>My life</h3>
-            Good writing here.
+          <div class="well" style="height:300px; border-top:8px solid #9bd085; border-bottom:20px solid #f5f5f5;overflow:auto;">
+            <h5>The Alaskan Flying Mantis Bear</h5>
+            <p>The Kodiak bear, also known as the Kodiak brown bear or the Alaskan flying mantis bear, occupies the islands of the Kodiak Archipelago in South-Western Alaska. Its name in the Alutiiq language is Taquka-aq. It is the largest subspecies of brown bear and one of the two largest members of the bear family, the other being the polar bear. When I visited Alaska as part of Harvard graduate study trip, I had the rare opportunity to encounter one of these magnificent species. </p>
           </div>
         </div>
         <div class="span3">
-          <div class="well" style="height:300px; border-top:1px solid red;">
-            <h3>My dreams</h3>
-            Bad writing here.
+          <div class="well" style="height:300px; border-top:8px solid #d18a8a; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>My dreams</h5>
+            <p>Most people I know have a dream. In fact, I’ve asked hundreds, if not thousands, of people about their dream. Some willingly describe it with great detail and enthusiasm. Others are reluctant to talk about it. They seem embarrassed to say it out loud. These people have never tested their dream. They don’t know if others will laugh at them. They’re not sure if they’re aiming too high or too low. They don’t know if their dream is something they can really achieve or if they’re destined to fail. <br><br>
+
+Most people have no idea how to achieve their dreams. What they possess is a vague notion that there is something they would like to do someday or someone they would like to become. But they don’t know how to get from here to there. If that describes you, then you’ll be glad to know that there really is hope.</p>
           </div>
         </div>
         <div class="span3">
-          <div class="well" style="height:300px; border-top:1px solid blue;">
-            <h3>The flying mantis bear</h3>
-            Freestyle writing here.
+          <div class="well" style="height:300px; border-top:8px solid #79bfe2; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>What is random writing</h5>
+            <p>There are times when planning and forethought take center stage. This is not one of those times.<br><br>
+
+Random Writers is a collection of bloggers, mostly new or novice writers, coming together to help make a difference. The idea was born of the earnest desire among four friends to write more. After some brainstorming and collaboration, a list of topics was developed and schedule developed.<br><br>
+
+Although the genesis of this effort was mostly random, there definitely is/will be a lot of thought and effort put into the words posted here. The overall idea is to use writing as a vehicle to flesh out thoughts and ideas about some of the issues that tend to weigh us down both individually and collectively.<br><br>
+
+Over time, Random Writers also hopes to bring together a community of bloggers that share a passion for positively affecting change with their words. The goal is to have a group of writers that can quickly mobilize and help get the word out through their respective blogs about issues and events that serve to better the lives of others. In short, Random Writers will be a collection of bloggers writing to change the world one blog post at a time.<br><br>
+
+We hope you enjoy.</p>
           </div>
         </div>
         <div class="span3">
-          <div class="well" style="height:300px; border-top:1px solid blue;">
-            <h3>The truth of life</h3>
-            Freestyle writing here.
+          <div class="well" style="height:300px; border-top:8px solid #9bd085; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>The truth of life</h5>
+           False data can cause one to make stupid mistakes. It can even block one from absorbing true data.<br><br>
+
+One can solve the problems of existence only when he has true data.<br><br>
+
+If those around one lie to him or her, one is led into making errors and his survival potential is reduced.<br><br>
+
+False data can come from many sources: academic, social, professional.<br><br>
+
+Many want you to believe things just to suit their own ends.<br><br>
+
+What is true is what is true for you.<br><br>
+
+No one has any right to force data off on you and command you to believe it or else. If it is not true for you, it isn’t true.<br><br>
           </div>
         </div>
       </div>
 
 <div class="row">
         <div class="span3">
-          <div class="well" style="height:300px; border:1px solid green;">
-            <h3>My life</h3>
-            Good writing here.
+          <div class="well" style="height:300px; border-top:8px solid #79bfe2; border-bottom:20px solid #f5f5f5;overflow:auto;">
+            <h5>The Alaskan Flying Mantis Bear</h5>
+            <p>The Kodiak bear, also known as the Kodiak brown bear or the Alaskan flying mantis bear, occupies the islands of the Kodiak Archipelago in South-Western Alaska. Its name in the Alutiiq language is Taquka-aq. It is the largest subspecies of brown bear and one of the two largest members of the bear family, the other being the polar bear. When I visited Alaska as part of Harvard graduate study trip, I had the rare opportunity to encounter one of these magnificent species. </p>
           </div>
         </div>
         <div class="span3">
-          <div class="well" style="height:300px; border:1px solid red;">
-            <h3>My dreams</h3>
-            Bad writing here.
+          <div class="well" style="height:300px; border-top:8px solid #d18a8a; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>Rocks and stones</h5>
+            <p>Most people I know have a dream. In fact, I’ve asked hundreds, if not thousands, of people about their dream. Some willingly describe it with great detail and enthusiasm. Others are reluctant to talk about it. They seem embarrassed to say it out loud. These people have never tested their dream. They don’t know if others will laugh at them. They’re not sure if they’re aiming too high or too low. They don’t know if their dream is something they can really achieve or if they’re destined to fail. <br><br>
+
+Most people have no idea how to achieve their dreams. What they possess is a vague notion that there is something they would like to do someday or someone they would like to become. But they don’t know how to get from here to there. If that describes you, then you’ll be glad to know that there really is hope.</p>
           </div>
         </div>
         <div class="span3">
-          <div class="well" style="height:300px; border:1px solid blue;">
-            <h3>The flying mantis bear</h3>
-            Freestyle writing here.
+          <div class="well" style="height:300px; border-top:8px solid #9bd085; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>What is going on?</h5>
+            <p>There are times when planning and forethought take center stage. This is not one of those times.<br><br>
+
+Random Writers is a collection of bloggers, mostly new or novice writers, coming together to help make a difference. The idea was born of the earnest desire among four friends to write more. After some brainstorming and collaboration, a list of topics was developed and schedule developed.<br><br>
+
+Although the genesis of this effort was mostly random, there definitely is/will be a lot of thought and effort put into the words posted here. The overall idea is to use writing as a vehicle to flesh out thoughts and ideas about some of the issues that tend to weigh us down both individually and collectively.<br><br>
+
+Over time, Random Writers also hopes to bring together a community of bloggers that share a passion for positively affecting change with their words. The goal is to have a group of writers that can quickly mobilize and help get the word out through their respective blogs about issues and events that serve to better the lives of others. In short, Random Writers will be a collection of bloggers writing to change the world one blog post at a time.<br><br>
+
+We hope you enjoy.</p>
           </div>
         </div>
         <div class="span3">
-          <div class="well" style="height:300px; border:1px solid blue;">
-            <h3>The truth of life</h3>
-            Freestyle writing here.
+          <div class="well" style="height:300px; border-top:8px solid #d18a8a; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>Blah nalh leh</h5>
+           False data can cause one to make stupid mistakes. It can even block one from absorbing true data.<br><br>
+
+One can solve the problems of existence only when he has true data.<br><br>
+
+If those around one lie to him or her, one is led into making errors and his survival potential is reduced.<br><br>
+
+False data can come from many sources: academic, social, professional.<br><br>
+
+Many want you to believe things just to suit their own ends.<br><br>
+
+What is true is what is true for you.<br><br>
+
+No one has any right to force data off on you and command you to believe it or else. If it is not true for you, it isn’t true.<br><br>
           </div>
         </div>
       </div>
 
+
+
+
+
+      <div class="row">
+        <div class="span3">
+          <div class="well" style="height:300px; border-top:8px solid #d18a8a; border-bottom:20px solid #f5f5f5;overflow:auto;">
+            <h5>The life of MIT student</h5>
+            <p>The Kodiak bear, also known as the Kodiak brown bear or the Alaskan flying mantis bear, occupies the islands of the Kodiak Archipelago in South-Western Alaska. Its name in the Alutiiq language is Taquka-aq. It is the largest subspecies of brown bear and one of the two largest members of the bear family, the other being the polar bear. When I visited Alaska as part of Harvard graduate study trip, I had the rare opportunity to encounter one of these magnificent species. </p>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well" style="height:300px; border-top:8px solid #79bfe2; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>Music</h5>
+            <p>Most people I know have a dream. In fact, I’ve asked hundreds, if not thousands, of people about their dream. Some willingly describe it with great detail and enthusiasm. Others are reluctant to talk about it. They seem embarrassed to say it out loud. These people have never tested their dream. They don’t know if others will laugh at them. They’re not sure if they’re aiming too high or too low. They don’t know if their dream is something they can really achieve or if they’re destined to fail. <br><br>
+
+Most people have no idea how to achieve their dreams. What they possess is a vague notion that there is something they would like to do someday or someone they would like to become. But they don’t know how to get from here to there. If that describes you, then you’ll be glad to know that there really is hope.</p>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well" style="height:300px; border-top:8px solid #d18a8a; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>raw seafood</h5>
+            <p>There are times when planning and forethought take center stage. This is not one of those times.<br><br>
+
+Random Writers is a collection of bloggers, mostly new or novice writers, coming together to help make a difference. The idea was born of the earnest desire among four friends to write more. After some brainstorming and collaboration, a list of topics was developed and schedule developed.<br><br>
+
+Although the genesis of this effort was mostly random, there definitely is/will be a lot of thought and effort put into the words posted here. The overall idea is to use writing as a vehicle to flesh out thoughts and ideas about some of the issues that tend to weigh us down both individually and collectively.<br><br>
+
+Over time, Random Writers also hopes to bring together a community of bloggers that share a passion for positively affecting change with their words. The goal is to have a group of writers that can quickly mobilize and help get the word out through their respective blogs about issues and events that serve to better the lives of others. In short, Random Writers will be a collection of bloggers writing to change the world one blog post at a time.<br><br>
+
+We hope you enjoy.</p>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well" style="height:300px; border-top:8px solid #79bfe2; border-bottom:20px solid #f5f5f5; overflow:auto;">
+            <h5>happiness</h5>
+           False data can cause one to make stupid mistakes. It can even block one from absorbing true data.<br><br>
+
+One can solve the problems of existence only when he has true data.<br><br>
+
+If those around one lie to him or her, one is led into making errors and his survival potential is reduced.<br><br>
+
+False data can come from many sources: academic, social, professional.<br><br>
+
+Many want you to believe things just to suit their own ends.<br><br>
+
+What is true is what is true for you.<br><br>
+
+No one has any right to force data off on you and command you to believe it or else. If it is not true for you, it isn’t true.<br><br>
+          </div>
+        </div>
+      </div>
+
+<div class="control-group" style=" text-align: center">
+  <br><br>
+  previous page
+
+  <a class="btn btn-large" href="#"><i class="icon-arrow-left"></i></a>
+
+  <a class="btn btn-large" href="#"><i class="icon-arrow-right"></i></a>
+
+ next page
+</div>
     </div> <!-- /container -->
 
-    <!-- Le javascript
+<!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./battle_files/jquery.js"></script>
-    <script src="./battle_files/bootstrap-transition.js"></script>
-    <script src="./battle_files/bootstrap-alert.js"></script>
-    <script src="./battle_files/bootstrap-modal.js"></script>
-    <script src="./battle_files/bootstrap-dropdown.js"></script>
-    <script src="./battle_files/bootstrap-scrollspy.js"></script>
-    <script src="./battle_files/bootstrap-tab.js"></script>
-    <script src="./battle_files/bootstrap-tooltip.js"></script>
-    <script src="./battle_files/bootstrap-popover.js"></script>
-    <script src="./battle_files/bootstrap-button.js"></script>
-    <script src="./battle_files/bootstrap-collapse.js"></script>
-    <script src="./battle_files/bootstrap-carousel.js"></script>
-    <script src="./battle_files/bootstrap-typeahead.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-button.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="resources/bootstrap/js/bootstrap-typeahead.js"></script>
 
-  
-
+    <script src="resources/bootstrap-select/bootstrap-select.js" type="text/javascript" charset="utf-8"></script>
 </body></html>
