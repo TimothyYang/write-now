@@ -2,8 +2,30 @@
 var CT = require('./modules/country-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
+var request = require("request");
 
 module.exports = function(app) {
+
+    app.get("/get-accounts", function(req, res) {
+
+	request("https://api.mongolab.com/api/1/databases/heroku_app15381569/collections/accounts?apiKey=CPBZJI2Y7k0K8NAlVZwM9QqHctUJrWUv", function(error, response, body) {
+	    res.send(body);
+//	    response = body;
+	});
+
+//        res.send(response)
+    });
+
+    app.get("/add-user", function(req, res) {
+	app.post({
+	    headers: {'content-type' : 'application/json'},
+	    url:     'https://api.mongolab.com/api/1/databases/heroku_app15381569/collections/accounts?apiKey=CPBZJI2Y7k0K8NAlVZwM9QqHctUJrWUv',
+	    body:    JSON.stringify({ name:'benB' })
+	}, function(error, response, body){
+	    console.log(reponse);
+	    console.log(body);
+	});
+    });
 
     app.get("/string", function(req, res) {
         res.send("lolololol")
