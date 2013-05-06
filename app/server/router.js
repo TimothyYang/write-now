@@ -16,7 +16,7 @@ module.exports = function(app) {
 			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
 				if (o != null){
 				    req.session.user = o;
-					res.redirect('/home');
+					res.redirect('/userpref');
 				}	else{
 					res.render('login', { title: 'Hello - Please Login To Your Account' });
 				}
@@ -41,7 +41,7 @@ module.exports = function(app) {
 	
 // logged-in user homepage //
 	
-	app.get('/home', function(req, res) {
+	app.get('/userpref', function(req, res) {
 	    if (req.session.user == null){
 	// if user is not logged-in redirect back to login page //
 	        res.redirect('/');
@@ -54,13 +54,13 @@ module.exports = function(app) {
 	    }
 	});
 	
-	app.post('/home', function(req, res){
+	app.post('/userpref', function(req, res){
 		if (req.param('user') != undefined) {
 			AM.updateAccount({
 				user 		: req.param('user'),
 				name 		: req.param('name'),
 				email 		: req.param('email'),
-				country 	: req.param('country'),
+				//country 	: req.param('country'),
 				pass		: req.param('pass')
 			}, function(e, o){
 				if (e){
@@ -93,8 +93,8 @@ module.exports = function(app) {
 			name 	: req.param('name'),
 			email 	: req.param('email'),
 			user 	: req.param('user'),
-			pass	: req.param('pass'),
-			country : req.param('country')
+			pass	: req.param('pass')//,
+			//country : req.param('country')
 		}, function(e){
 			if (e){
 				res.send(e, 400);
