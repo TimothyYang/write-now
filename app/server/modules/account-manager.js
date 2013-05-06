@@ -1,11 +1,10 @@
-
 var crypto 		= require('crypto')
 var MongoDB 	= require('mongodb').Db;
 var Server 		= require('mongodb').Server;
 var moment 		= require('moment');
 
-var dbPort 		= 27017;
-var dbHost 		= 'localhost';
+var dbPort 		= process.env.PORT || 3000;
+var dbHost 		= 'write-now.herokuapp.com';
 var dbName 		= 'node-login';
 
 /* establish the database connection */
