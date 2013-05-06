@@ -4,19 +4,25 @@ var Server 		= require('mongodb').Server;
 var moment 		= require('moment');
 
 var dbPort 		= 61757;
-var dbHost 		= 'mongolab.com';
-var dbName 		= 'node-login';
+var dbHost 		= 'ds061757.mongolab.com';
+var dbName 		= 'heroku_app15381569';
 
 /* establish the database connection */
 
 var db = new MongoDB(dbName, new Server(dbHost, dbPort, {auto_reconnect: true}), {w: 1});
 	db.open(function(e, d){
-	if (e) {
+		d.authenticate('test', 'test', function(err, success) {
+        if (e) {
 		console.log(e);
-	}	else{
+		}	else{
 		console.log('connected to database :: ' + dbName);
 	}
+    });
+
 });
+
+
+
 var accounts = db.collection('accounts');
 
 /* login validation methods */
