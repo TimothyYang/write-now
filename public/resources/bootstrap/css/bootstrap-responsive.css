@@ -949,7 +949,8 @@
   }
 }
 
-@media (max-width: 979px) {
+/* Changes width of page. Determines when the top bar changes to menu mode*/
+@media (max-width: 10px) {
   body {
     padding-top: 0;
   }
