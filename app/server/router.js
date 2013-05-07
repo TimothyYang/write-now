@@ -65,6 +65,16 @@ module.exports = function(app) {
 	    }
 	});
     });
+
+    // get current user //
+    app.get("/get-current-user", function(req, res) {
+    	console.log(req.session.user);
+		if (req.session.user != null){
+		    res.send(req.session.user.name);
+		}	else{
+		    res.send("User Not Logged In");
+		}
+    });
     
     // logged-in user homepage //
     
