@@ -25,8 +25,20 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$.get("/get-current-user", function(string) {
+		if(string=="User Not Logged In"){
+			$("#user-nav").html('<a class="btn btn-primary" href="/login">Log In Or Register</a>');
+			$("#currentuser").text(string.charAt(0).toUpperCase() + string.slice(1));
+		} else{
+			$("#user-nav").html('<ul class="nav"><li class="dropdown"><a id="currentuser-nav" class="dropdown-toggle" data-toggle="dropdown" href="#"></a><ul class="dropdown-menu" role="menu" aria-labelledby="currentuser-nav"><li role="presentation"><a role="menuitem" href="/profile.html">Profile</a></li><li role="presentation"><a role="menuitem" href="/userpref">Preferences</a></li></ul></li></ul><a class="btn btn-primary" id="logout">Logout</a>');
+			$("#currentuser").text(string.charAt(0).toUpperCase() + string.slice(1));
+	    	$("#currentuser-nav").text(string.charAt(0).toUpperCase() + string.slice(1));
+	    	$('#logout').click(function(){ console.log('attemptedlogout'); hc.attemptLogout(); });
+		}
+	});
+
 	$('#name-tf').focus();
-	$('#github-banner').css('top', '41px');
 
 // customize the account settings form //
 	
