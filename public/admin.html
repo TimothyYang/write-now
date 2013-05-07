@@ -67,6 +67,28 @@
 	  <div class="well" id="add-user-well"></div>
 	</div>
       </div>
+      <div class="row">
+	<div class="span12">
+	  <a id="writings">Get all writings</a>
+	  <div class="well" id="writings-well"></div>
+	</div>
+      </div>
+      <div class="row">
+	<div class="span12">
+	  <a id="add-writing">Add a writing (fill in below fields first)</a>
+	  <div class="well" id="add-writing-well"></div>
+	    prompt: <input type="text" id="prompt">The text of a writing<br>
+	    category: <input type="text" id="category"><br>
+	    time-limit: <input type="text" id="time-limit">How much time the user had for this writing.<br>
+	    time-start: <input type="text" id="time-start">When the user pressed "start" to start the battle<br>  
+	    user: <input type="text" id="user">The user ID of the user who wrote the piece<br>
+ 	    opponent: <input type="text" id="opponent">The user ID of the opponent for this piece. Empty string if freestyle.<br>
+	    opponent-writing-id: <input type="text" id="opponent-writing-id">The writing ID of the writing that the opponent wrote<br>
+	    text: <input type="text" id="text">The text of the entry<br>
+	    votes: <input type="text" id="votes">The number of votes that this piece got.<br>
+	    comment-ids: <input type="text" id="comment-ids">A list of comment IDs, one for each comment.<br>
+	</div>
+      </div>
       <hr>
     </div> <!-- /container -->
 
