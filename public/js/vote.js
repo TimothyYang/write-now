@@ -74,12 +74,4 @@ $(document).ready(function() {
 	    }
 	}
     });
-
-    // TODO: REMOVE TEST
-    $("#test").click(function(){
-	$.get("/string", function(string) {
-	    console.log(string)
-	})
-    });
-
 });
