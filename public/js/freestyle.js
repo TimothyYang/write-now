@@ -7,14 +7,14 @@ $(document).ready(function() {
     var user;
     var timeStart;
 
-
-
     // Get current user
     $.get("/get-current-user", function(string) {
 	user = string;
-    })
 
-    // Get starting time
+	// Set username
+	$("#username").html(user);
+
+    })
 
     // Initialize Bootstrap-Select
     $(".selectpicker").selectpicker();
@@ -89,7 +89,7 @@ $(document).ready(function() {
 	    	clearInterval(counter);
 	    	$("#info").removeClass("alert-info");
 	    	$("#info").addClass("alert-success");
-	    	$("#info").html("<div width='100%' style='font-size:2em;font-weight:bold;text-align:center;margin-bottom:15px'>Time's up!</div><div width='100%' style='font-size:1em;font-weight:bold;text-align:center'><a href='results.html'>View Results</a> | <a href='freestyle.html'>Play Again</a></div>");	            
+	    	$("#info").html("<div width='100%' style='font-size:2em;font-weight:bold;text-align:center;margin-bottom:15px'>Time's up!</div><div width='100%' style='font-size:1em;font-weight:bold;text-align:center'><a href='freestyle.html'>Play Again</a></div>");	            
 	    	$("#you-box").attr("disabled", true);
 	    	$("#submit").html("<h4>Thanks for your submission!</h4>");
 	    	$("#submit").attr("submit", "true");
