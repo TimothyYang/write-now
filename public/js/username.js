@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//replace the user's name on the navigation of every page
 	$.get("/get-current-user", function(string) {
-		if(string=="User Not Logged In"){
+		if(string=="Guest"){
 			$("#user-nav").html('<a class="btn btn-primary" href="/login">Log In Or Register</a>');
 			$("#currentuser").text(string.charAt(0).toUpperCase() + string.slice(1));
 		} else{

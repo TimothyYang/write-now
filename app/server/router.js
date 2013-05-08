@@ -60,7 +60,17 @@ module.exports = function(app) {
 		if (req.session.user != null){
 		    res.send(req.session.user.name);
 		}	else{
-		    res.send("User Not Logged In");
+		    res.send("Guest");
+		}
+    });
+
+        // get current user id//
+    app.get("/get-current-user-id", function(req, res) {
+    	console.log(req.session.user);
+		if (req.session.user != null){
+		    res.send(req.session.user._id.$oid);
+		}	else{
+		    res.send("Guest");
 		}
     });
     
